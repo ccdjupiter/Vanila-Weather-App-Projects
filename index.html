@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>WEATHER-APP</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app-wrapper">
+        <div class="weather-app">
+        <div class="overview">
+          <form class="search-form mb-4" id="search-form">
+            <div class="row">
+            <div class="col-6">
+            <input type="search" 
+            placeholder="Enter a city..."
+            autofocus="on"
+            autocomplete="off"
+            id="city-input"
+            class="form-control shadow-sm" />
+          </div>
+        <div class="col-3">
+            <input type="submit" 
+            value="Search" 
+            class="form-control btn btn -primary shadow-sm w-100"/>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-success w-100" id="current-location-button">
+            Current
+          </button>
+        </div>
+        </div>
+       </form>       
+          <h1 id="city"></h1>
+  <ul>
+      <li>Last updated:<span id="date"></span></li>
+      <li id="description"></li>
+  </ul>
+</div>
+          <div class="row">
+            <div class="col-6">
+            <div class="clearfix weather-temperature">  
+                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
+                alt="partly_cloudy" 
+                class="float-left" 
+                id="icon">
+           <div class="float-left">
+           <span class="temperature" id="temperature"></span>
+            <span class="units">
+              <small>
+             <a href="#" id="celsius-link" class="active"> °C</a> | <a href="#" id="fahrenheit-link" class="active">°F</a>
+            </small>
+           </span>
+           </div>
+           </div>
+          </div>
+            <div class="col-6">
+              <ul>
+                <li>
+                  Humidity: <span id="humidity">%</span>
+                </li>
+                <li>
+                  Wind:  <span id="wind">KM/H</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-forcast" id="forecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">
+                SUN
+              </div>
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-min">
+                    13° |
+                 </span>
+                  <span class="weather-forecast-max">
+                    19°
+                  </span>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        <small>
+        <a href="https://github.com/CC-Daniels/VANILLA-WEATHER-APP" target="_blank">   
+            Open-source-code
+        </a >
+            by CHIMCHIM DANIEL🌼🌕🌼
+        </small>
+</div>
+</div>
+</body>
+<script src="src/app.js"></script>
+</html>
